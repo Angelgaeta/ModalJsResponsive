@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Modal Js Responsive</title>
+  </head>
+  <body>
+    <div class="center">
+      <a class="valider">Get A Quote</a>
+    </div>
+
+    <div class="popup-cont">
+      <div class="popup-box">
+        <form id="formulaire-popup" action="form.php" method="post">
+          <div class="form-element-title">
+            <label for="title">Product title&#42; </label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Title"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-element-commun">
+            <div class="form-element-one">
+              <label for="rating">Product rating&#42;</label>
+              <input type="select" id="rating" placeholder="Rating" />
+            </div>
+            <div class="form-element-two">
+              <label for="price">Product price&#42;</label>
+              <input
+                type="number"
+                min="0"
+                step=".01"
+                id="price"
+                placeholder="$Price"
+              />
+            </div>
+            <div class="form-element-three">
+              <label for="list-price">Product list price&#42;</label>
+              <input
+                type="number"
+                min="0"
+                step=".01"
+                id="listprice"
+                placeholder="$List Price"
+              />
+            </div>
+          </div>
+
+          <div class="form-element-checkbox">
+            <label for="featured"
+              >Is featured <input type="checkbox" id="featured"</label
+            >
+            <p>
+              If Is Featured is selected the product will appear in a large
+              card.
+            </p>
+          </div>
+
+          <div class="form-element-description">
+            <label for="description">Productuct description</label>
+            <textarea
+              id="description"
+              rows="5"
+              cols=""
+              placeholder="Description"
+            ></textarea>
+          </div>
+
+          <div class="form-element-bouton">
+            <a class="valider" href="#">Add Product</a>
+            <a class="annuler" href="#">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
