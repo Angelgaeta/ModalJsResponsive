@@ -1,21 +1,24 @@
-let cancel = document.getElementsByClassName("annuler")[0],
-    modal = document.getElementsByClassName("popup-cont")[0],
-    confirm = document.getElementsByClassName("valider")[0];
+// 1_Récupérer les ID
+// 2_Ajouter le gestionnaire d'événement
+// 3_Définir la fonction en reprenant le style pour l'afficher
 
 
-function x() {
-  modal.style.display = "none";
-}
-cancel.onclick = x;
+const confirm = document.getElementById("valider"),
+      cancel = document.getElementById("annuler"),
+      modal = document.getElementById("popupone"),
+      ajouter = document.getElementById("addprod"),
+      succes = document.querySelector(".overlay");
+ 
+confirm.addEventListener("click", function(){
+    modal.style.display = 'block';
+    succes.style.display = 'none';
+});
 
+ajouter.addEventListener("click", function(){
+    succes.style.display = 'block';
+    modal.style.display = 'none';
+});
 
-confirm.onclick = function () {
-  modal.style.display = "block";
-};
-
-
-window.onclick = function (e) {
-  if (e.target.className === "popup-cont") {
-    e.target.style.display = "none";
-  }
-};
+cancel.addEventListener('click', function(){
+  modal.style.display = 'none';
+});
